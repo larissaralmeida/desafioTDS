@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230812 19:54:24.534" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="d:\Estudos\desafioTDSrobot\login.robot">
+<test id="s1-t1" name="Cenario 4: Realizar cadastro com credenciais válidas" line="43">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230812 19:54:24.697" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<status status="PASS" starttime="20230812 19:54:24.696" endtime="20230812 19:54:29.755"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230812 19:54:29.756" endtime="20230812 19:54:29.864"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:29.865" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20230812 19:54:29.864" endtime="20230812 19:54:30.859"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="signup-name"]</arg>
+<arg>Larissa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:30.860" level="INFO">Typing text 'Larissa' into text field 'css=input[data-qa="signup-name"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:30.859" endtime="20230812 19:54:30.923"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[data-qa="signup-email"]</arg>
+<arg>larissar@teste.com.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:30.925" level="INFO">Typing text 'larissar@teste.com.br' into text field 'css=[data-qa="signup-email"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:30.924" endtime="20230812 19:54:30.984"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=[data-qa="signup-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:30.985" level="INFO">Clicking button 'css=[data-qa="signup-button"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:30.984" endtime="20230812 19:54:32.183"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${success message}</var>
+<arg>xpath=//*[@id="form"]/div/div/div/div/h2/b</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.206" level="INFO">${success message} = ENTER ACCOUNT INFORMATION</msg>
+<status status="PASS" starttime="20230812 19:54:32.184" endtime="20230812 19:54:32.206"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${success message}</arg>
+<arg>${Expected success message}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230812 19:54:32.207" endtime="20230812 19:54:32.207"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${success message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230812 19:54:32.208" endtime="20230812 19:54:32.208"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>css=input[data-qa="password"]</arg>
+<arg>123456</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.210" level="INFO">Typing password into text field 'css=input[data-qa="password"]'.</msg>
+<msg timestamp="20230812 19:54:32.254" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230812 19:54:32.297" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230812 19:54:32.209" endtime="20230812 19:54:32.298"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="first_name"]</arg>
+<arg>Larissa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.299" level="INFO">Typing text 'Larissa' into text field 'css=input[data-qa="first_name"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.298" endtime="20230812 19:54:32.404"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="last_name"]</arg>
+<arg>Rodrigues</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.405" level="INFO">Typing text 'Rodrigues' into text field 'css=input[data-qa="last_name"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.404" endtime="20230812 19:54:32.481"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="address"]</arg>
+<arg>Rua da Guia</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.482" level="INFO">Typing text 'Rua da Guia' into text field 'css=input[data-qa="address"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.481" endtime="20230812 19:54:32.553"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>css=[data-qa="country"]</arg>
+<arg>United States</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230812 19:54:32.554" level="INFO">Selecting options from selection list 'css=[data-qa="country"]' by value United States.</msg>
+<status status="PASS" starttime="20230812 19:54:32.554" endtime="20230812 19:54:32.616"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="state"]</arg>
+<arg>Pernambuco</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.617" level="INFO">Typing text 'Pernambuco' into text field 'css=input[data-qa="state"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.616" endtime="20230812 19:54:32.679"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="city"]</arg>
+<arg>Recife</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.680" level="INFO">Typing text 'Recife' into text field 'css=input[data-qa="city"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.679" endtime="20230812 19:54:32.760"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="zipcode"]</arg>
+<arg>000111333</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.761" level="INFO">Typing text '000111333' into text field 'css=input[data-qa="zipcode"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.760" endtime="20230812 19:54:32.839"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=input[data-qa="mobile_number"]</arg>
+<arg>81 983947364</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.841" level="INFO">Typing text '81 983947364' into text field 'css=input[data-qa="mobile_number"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.840" endtime="20230812 19:54:32.907"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=[data-qa="create-account"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:32.908" level="INFO">Clicking button 'css=[data-qa="create-account"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:32.908" endtime="20230812 19:54:35.870"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${created_account}</var>
+<arg>xpath=//*[@id="form"]/div/div/div/h2/b</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:35.885" level="INFO">${created_account} = ACCOUNT CREATED!</msg>
+<status status="PASS" starttime="20230812 19:54:35.871" endtime="20230812 19:54:35.885"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${created_account}</arg>
+<arg>${Expected message create_account}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230812 19:54:35.885" endtime="20230812 19:54:35.886"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${created_account}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230812 19:54:35.886" endtime="20230812 19:54:35.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[data-qa="continue-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230812 19:54:35.887" level="INFO">Clicking element 'css=[data-qa="continue-button"]'.</msg>
+<status status="PASS" starttime="20230812 19:54:35.887" endtime="20230812 19:54:40.277"/>
+</kw>
+<status status="PASS" starttime="20230812 19:54:24.696" endtime="20230812 19:54:40.278"/>
+</test>
+<status status="PASS" starttime="20230812 19:54:24.537" endtime="20230812 19:54:40.279"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
